@@ -20,7 +20,7 @@
 }
 
 p#prompt {
-  margin-top: 1.8em;
+  margin-top: 1.6em;
   margin-bottom: 0.5em;
   font-size: 1.5em;
 }
@@ -42,3 +42,19 @@ p#next {
   text-align: center;
 }
 
+#footer {
+  /* margin-left: 1em; */
+  /* margin-right: 1em; */
+  /* width: 100%; */
+  /* left: 1em; */
+  /* right: 1em; */
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#footer p.left {
+  float: left;
+}
+#footer p.right {
+  float: right;
+}
