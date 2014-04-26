@@ -1,3 +1,16 @@
-= image_tag(screenshot_url(@left.url))
-= image_tag(screenshot_url(@right.url))
-
+#wrap
+  %p#prompt よいと思ったほうをクリック！！！  
+  #wrap-screenshots
+    .screenshot.left
+      = form_tag '/members/fight' do
+        = hidden_field_tag 'winner_id', @left.id
+        = hidden_field_tag 'loser_id', @right.id
+        = image_submit_tag screenshot_url(@left.url)
+    .screenshot.right
+      = form_tag '/members/fight' do
+        = hidden_field_tag 'winner_id', @right.id
+        = hidden_field_tag 'loser_id', @left.id
+        = image_submit_tag screenshot_url(@right.url)
+  .clear
+  %p#next
+    %a{:href => '/'} どっちもダメ！次へ！！
