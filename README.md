@@ -3,6 +3,12 @@ jdmash
 
 facemash like web app for Japan diet members' website
 
+## require
+
+* sqlite3 or Postgres9.x
+* bundler
+* Rails4
+
 
 ## setup
 
@@ -13,12 +19,14 @@ bundle install --path vendor/bundle
 rake db:migrate
 ```
 
+
 ## import from JapanDietDB API
 
 ```
 rails c
 irb(main):001:0> Member.import_from_api('https://japandietdb.net/members/member_all.json')
 ```
+
 
 ## random search
 
