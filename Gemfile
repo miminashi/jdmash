@@ -39,4 +39,9 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'elo'
+gem 'haml-rails'
 
+group :development do
+  # Converter erb => haml
+  gem 'erb2haml'
+end
