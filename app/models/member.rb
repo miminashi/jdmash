@@ -15,6 +15,21 @@ class Member < ActiveRecord::Base
     end
   end
 
+  def self.fight(opts)
+    raise unless opts[:winner] and opts[:loser]
+    _winner = opts[:winner]
+    _loser = opts[:loser]
+
+    winner = Elo::Player.new(:rating => _winner.rating)
+    loser = Elo::Player.new(:rating => _loser.rating)
+    
+    game = winner.versus(loser)
+    game.winner = winner
+    
+    _winner.update(:rating => winner.rating)
+    _loser.update(:rating => loser.rating)
+  end
+
   def name
     self.family_name + self.first_name
   end
