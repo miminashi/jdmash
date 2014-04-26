@@ -43,17 +43,13 @@ p#next {
 }
 
 #footer {
-  /* margin-left: 1em; */
-  /* margin-right: 1em; */
-  /* width: 100%; */
-  /* left: 1em; */
-  /* right: 1em; */
   padding-left: 1em;
   padding-right: 1em;
 }
 
 #footer p.left {
   float: left;
+  margin-right: 0.5em;
 }
 #footer p.right {
   float: right;

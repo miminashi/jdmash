@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   post 'members/fight' => 'members#fight'
   resources :members
 
+  get '/about' => 'pages#about'
+  get '/ranking' => 'members#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
